@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="css/style.css" rel="Stylesheet" />
+  </head>
+  <body ng-app="myApp2">
+     <div ng-controller="myEvent">
+	    <table>
+		   <thead>
+		     <tr>
+			   <th>Name</th>
+			   <th>Like</th>
+               <th>Dislike</th>
+               <th>Likes/Dislikes</th>
+             </tr>
+		   </thead>
+		   <tbody>
+		     <tr ng-repeat="technology in technologies">
+			   <td>{{technology.name}}</td>
+			   <td>{{technology.likes}}</td>
+			   <td>{{technology.dislikes}}</td>
+			   <td>
+			      <input type="button" value="like" ng-click="incrementLikes(technology)">
+				  <input type="button" value="dislike" ng-click="incrementDislikes(technology)">
+			   </td>
+			 </tr>
+		   </tbody>
+		</table>
+     </div>
+	 <script src="js/angular.js"></script>
+	 <script src="js/script2.js"></script>
+  </body>
+</html>
